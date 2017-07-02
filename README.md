@@ -25,6 +25,11 @@ Then handle the promise as you wish.
   var b = [0,1]
   b.observe(0, "a").then(() => console.log('Even better!'))
   b[0] = "a"
+
+  a.nested = {whatAboutThis: "nope"}
+  a.nested.observe('whatAboutThis', "yep")
+  .then(() => console.log('Amazed!'))
+  setTimeout(() => {a.nested.whatAboutThis="yep"},2000)
 </script>
 ```
 
