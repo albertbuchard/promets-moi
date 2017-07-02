@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example one</title>
+    <script src="../lib/promets.max.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var a = {lookAtThat:false}
+      a.observe('lookAtThat').then(() => console.log("yaye"))
+      setTimeout(() => {a.lookAtThat=true},3000)
+
+      var b = [0,1]
+      b.observe(0, "a").then(() => console.log('Even better!'))
+      b[0] = "a"
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
